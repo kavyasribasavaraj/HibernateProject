@@ -5,15 +5,30 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.src.service.DBConnection;
 import com.src.service.DBOperations;
+@Component("DBOperations")
 public class DBOperationsImpl  implements DBOperations{
 
+	@Autowired
 	private DBConnection  dbConnection;
-	public void setbean(DBConnection dbConnection){
+	/*public void setbean(DBConnection dbConnection){
 		
 		this. dbConnection= dbConnection;
+	}*/
+	/*public DBOperationsImpl(DBConnection dbConnection){
+		this. dbConnection= dbConnection;
+		
+	}*/
+		/*public DBConnection getDbConnection() {
+		return dbConnection;
 	}
+	public void setDbConnection(DBConnection dbConnection) {
+		this.dbConnection = dbConnection;
+	}*/
 		public void createtable() throws ClassNotFoundException {
 			try{
 				Connection con=dbConnection.getConnection();

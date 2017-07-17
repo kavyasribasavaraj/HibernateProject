@@ -3,9 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-       
+
   <bean id = "DBConnection" class = "com.src.service.impl.DBConnectionImpl" ></bean>
-  <bean id = "DBOperations" class = "com.src.service.impl.DBOperationsImpl" ></bean>  
-   
+  <bean id = "DBOperations" class = "com.src.service.impl.DBOperationsImpl" >
+   <!-- <constructor-arg index="0" ref="DBConnection"></constructor-arg> --> 
+    <property name="dbConnection" ref="DBConnection"></property>
+         </bean>
    
 </beans>

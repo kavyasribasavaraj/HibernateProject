@@ -4,11 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+//import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
 import com.src.service.DBConnection;
 
-
+@Component("DBConnection")// basically it creates an object of this class
 public class DBConnectionImpl implements DBConnection {
 
+	
 	@Override
 	public Connection getConnection() throws ClassNotFoundException {
 		final String USER = "root";
