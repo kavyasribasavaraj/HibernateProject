@@ -10,6 +10,13 @@
        </properties>
   <name>MySpringProj</name>
   <url>http://maven.apache.org</url>
+  <repositories>
+              <repository>
+                     <id>JBoss repository</id>
+                     <url>http://repository.jboss.com/maven2/</url>
+              </repository>
+       </repositories>
+
   <dependencies>
   <dependency>
                     <groupId>mysql</groupId>
@@ -22,6 +29,18 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>
+                     <groupId>org.hibernate</groupId>
+                     <artifactId>ejb3-persistence</artifactId>
+                     <version>1.0.1.GA</version>
+              </dependency>
+              <dependency>
+                     <groupId>org.hibernate</groupId>
+                     <artifactId>hibernate-annotations</artifactId>
+                     <version>3.3.1.GA</version>
+              </dependency>
+    
     
     <dependency>
                      <groupId>org.springframework</groupId>

@@ -35,10 +35,10 @@ public class ExecutionServiceImpl {
 		dbOperationService.selectvalues();		 
 	}*/
 	
-public static void main(String args[]) throws ClassNotFoundException{
+/*public static void main(String args[]) throws ClassNotFoundException{
 	ExecutionServiceImpl main=(ExecutionServiceImpl)applicationContext.getBean("auto");
 	main.execute();
-}
+}*/
 	
 	
 }
